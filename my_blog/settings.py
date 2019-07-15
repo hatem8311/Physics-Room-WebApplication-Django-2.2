@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '8c+srr^9l#x!2-u#bvx8kpue4&=(87!glzi7jeseq-8ty*b*+3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -137,3 +137,4 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'muhammedhatem999@gmail.com'
 EMAIL_HOST_PASSWORD = '01093823648Mm'
+ALLOWED_HOSTS = ['*']
