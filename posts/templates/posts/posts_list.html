@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>science room</title>
+    <style>
+
+        div{
+        border:1px dashed aqua;
+        margin:10px;
+        padding:10px;
+        font-family:verdana;
+        }
+    </style>
+</head>
+<body>
+<form method="GET" action="/posts/search/">
+    <input type="text" name="searchino" placeholder="search in articles by title">
+    <input type="submit" value="Search">
+</form>
+{% for object in posts %}
+<div>
+<a href="{%url 'posts:details' object.id %}"><h1>{{object.title}}</h1></a>
+
+    <p>created by:{{object.author}}</p>
+    <a href="/posts/edit/{{object.id}}">Edit</a>
+    <a href="/posts/delete/{{object.id}}">delete</a>
+</div>
+
+{%endfor%}
+fhkjdohjko
+</body>
+</html>

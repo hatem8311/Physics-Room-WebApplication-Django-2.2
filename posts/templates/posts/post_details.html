@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'posts/cssfiles/details.CSS'%}">
+<title>science room</title>
+{% endblock %}
+{%block body%}
+<div id = 'demo'>
+    <fieldset>
+        <legend>{{post.title}}</legend>
+
+
+    <p>{{post.content}} </p>
+
+</fieldset>
+<br>
+created by:{{post.author}}<br>
+    </div>
+
+<p id="commenthead">-----------------------------------------------------------------------------comments-------------------------------------------------------------------------------------
+
+</p>
+
+
+
+{%for comment in comments%}
+<p id="comment"><a href="/users/profile/{{comment.related_user.user_profile.id}}">{{comment.related_user}}</a> says : {{comment.text}}</p>
+{%endfor%}
+
+
+<a href="{%url 'posts:comment' post.id %}"> <button>Add Comment</button></a>
+
+{%endblock%}

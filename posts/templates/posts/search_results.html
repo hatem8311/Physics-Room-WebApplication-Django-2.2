@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        div{
+        border:1px dashed aqua;
+        margin:10px;
+        padding:10px;
+        font-family:verdana;
+        }
+        </style>
+</head>
+<body>
+{% for object in objects %}
+<div>
+<a href="/posts/{{object.id}}"><h1>{{object.title}}</h1></a>
+
+
+    <p>created by:{{object.author}}</p>
+</div>
+
+{%endfor%}
+</body>
+</html>

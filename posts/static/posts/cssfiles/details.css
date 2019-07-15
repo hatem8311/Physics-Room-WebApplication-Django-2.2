@@ -1,0 +1,22 @@
+#demo{
+border:5px dashed aqua;
+padding:10px;
+font-family: verdana;
+
+}
+
+#comment{
+
+border:1px solid green;}
+legend{
+font-size:24px;
+
+}
+
+#commenthead{
+text-align:center;
+border:1px solid red;
+color:blue;
+font-family: verdana;
+
+}

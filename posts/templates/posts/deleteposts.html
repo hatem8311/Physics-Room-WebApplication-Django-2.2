@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{%block body %}
+<h1>are you sure you want to delete this article?</h1>
+<form method="POST">
+    {% csrf_token %}
+<input type="submit" value="delete">
+
+</form>
+<p>No Go Back To <a HREF="/">HOME PAGE</a></p>
+{%endblock%}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Physics Room</title>
+    <link rel="stylesheet" href="{% static 'home/cssfiles/home.css'%}">
+</head>
+<body>
+<div id='cssmenu'>
+    {%if request.user.is_authenticated%}
+<ul>
+       <li ><a href='/users/register'>Sign up</a></li>
+   <li ><a href='/posts/'>Articles</a></li>
+   <li><a href='/users/logout'>logout</a></li>
+    <li><a href='/posts/create'>Wrtie an article</a></li>
+          <li><a href='/users/updateprofile/'>Update Profile</a></li>
+    <li><a href='/users/password-reset'>Reset Or set Password</a></li>
+
+    {%if request.user.user_profile.profile_picture%}
+    <li><a href='/users/profile/{{request.user.user_profile.id}}'>Profile</a></li>
+    {%endif%}
+</ul>
+
+</ul>
+    {%else%}
+    <ul>
+        <li ><a href='/users/register'>Sign up</a></li>
+   <li ><a href='/posts/'>Articles</a></li>
+   <li><a href='/users/login'>Login</a></li>
+        <li><a href='/users/password-reset'>Reset Or set Password</a></li>
+    </ul>
+    {%endif%}
+</div>
+<h1 id="welcome">Welcome To Physics Room,
+The Place Where Einstein lives.
+</h1>
+</body>
+</html>

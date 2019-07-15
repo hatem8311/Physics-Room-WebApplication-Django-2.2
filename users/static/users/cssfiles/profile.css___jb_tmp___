@@ -1,0 +1,21 @@
+img {
+  border-radius: 50%;
+  height:150px;
+  width:150px;
+  border: 5px dashed aqua;
+}
+
+body{
+font-family:verdana;
+}
+
+#demo{
+border:
+}
+
+p{
+font-size:24px;
+border: 2px dotted green;
+border-radius:5px;
+color:red;
+}
