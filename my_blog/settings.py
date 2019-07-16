@@ -23,10 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '8c+srr^9l#x!2-u#bvx8kpue4&=(87!glzi7jeseq-8ty*b*+3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['hatem8311.pythonanywhere.com']
 
 # Application definition
 
@@ -121,6 +120,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL='/media/'
 MEDIA_ROOT= os.path.join(BASE_DIR,'media')
 '''
@@ -136,5 +136,6 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'muhammedhatem999@gmail.com'
-EMAIL_HOST_PASSWORD = '01093823648Mm'
-ALLOWED_HOSTS = ['*']
+EMAIL_HOST_PASSWORD = ''
+
+
