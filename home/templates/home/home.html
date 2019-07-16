@@ -10,19 +10,15 @@
 <div id='cssmenu'>
     {%if request.user.is_authenticated%}
 <ul>
-       <li ><a href='/users/register'>Sign up</a></li>
    <li ><a href='/posts/'>Articles</a></li>
    <li><a href='/users/logout'>logout</a></li>
     <li><a href='/posts/create'>Wrtie an article</a></li>
           <li><a href='/users/updateprofile/'>Update Profile</a></li>
     <li><a href='/users/password-reset'>Reset Or set Password</a></li>
+    <li><a href='/users/changepass'>Change-Password</a></li>
 
-    {%if request.user.user_profile.profile_picture%}
     <li><a href='/users/profile/{{request.user.user_profile.id}}'>Profile</a></li>
-    {%endif%}
-</ul>
 
-</ul>
     {%else%}
     <ul>
         <li ><a href='/users/register'>Sign up</a></li>
